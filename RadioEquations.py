@@ -22,8 +22,8 @@ c = 3.00 * (10^8) # Speed of light (in m/s)
 T_Sys = 200 # Test T_SYS Value (in K)
 Outlier_Percentage = 0.05; # Percentage of data to be removed
 
-fileDirectory = "C:/Users/Ben Puckett/Desktop/Astronomy Club - Radio/Data Test Folder/G20-20180119.rad"
-dateTest = '2018:019:19:18:19'
+fileDirectory = "ENTER FILE DIR"
+dateTest = 'ENTER TEST DATE'
 
 binDataDictionary = {}
 freqSpaceDataDictionary = {}
@@ -152,6 +152,8 @@ if dataLines != '':
 print('Number of data lines: ' + str(dataLineCount))
 
 # Plot
+#TO-DO: Add descriptions, titles, and legends for the plots
+
 fig, ax = plt.subplots(2)
 fig.set_figheight(15)
 fig.set_figwidth(20)
