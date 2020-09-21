@@ -144,7 +144,7 @@ if dataLines != '':
             freqSpaceDataDictionary[date] = freqSpace
 
             # Store the velocity data
-            #velDataDictionary[date] = velocity
+            velDataDictionary[date] = velocity
 
         dataLineCount += 1
             
