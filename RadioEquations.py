@@ -22,6 +22,7 @@ c = 3.00 * (10^8) # Speed of light (in m/s)
 T_Sys = 200 # Test T_SYS Value (in K)
 Outlier_Percentage = 0.05; # Percentage of data to be removed
 
+# Enter file directory and name of the file (with extension) using forward slash instead of backslash.
 fileDirectory = "ENTER FILE DIR"
 dateTest = 'ENTER TEST DATE'
 
