@@ -1,7 +1,7 @@
 """
 RadioEquations.py
 
-Equations from the paper 'SRT Paper (2010)' converted to Python
+Equations from the paper 'SRT Paper (2010)' converted to Python as well as data formatting code
 
 @author: Ben Puckett
 """
