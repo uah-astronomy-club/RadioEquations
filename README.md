@@ -6,7 +6,7 @@ The rest of the code can be integrated into the Data_Processing file for running
 
 ## Features:
 
-Frequency space calculation
+* Frequency space calculation
 * Data outlier removal
 * Velocity of source with respect to standard calculation (uses VLSR)
 * Dictionary storage of data within the code for quick access
