@@ -8,5 +8,6 @@ The rest of the code can be integrated into the Data_Processing file for running
 
 * Frequency space calculation
 * Data outlier removal
+* Data averaging
 * Velocity of source with respect to standard calculation (uses VLSR)
 * Dictionary storage of data within the code for quick access
