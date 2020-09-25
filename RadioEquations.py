@@ -19,12 +19,11 @@ def VELOCITY_CALC(f, V_lsr):
 c = 3.00 * (10^8) # Speed of light (in m/s)
 
 # Input Values
-T_Sys = 200 # Test T_SYS Value (in K)
+T_Sys = 0 # Test T_SYS Value (in K)
 Outlier_Percentage = 0.05; # Percentage of data to be removed
 
-# Enter file directory and name of the file (with extension) using forward slash instead of backslash.
-fileDirectory = "ENTER FILE DIR"
-dateTest = 'ENTER TEST DATE'
+fileDirectory = "C:/Users/Ben Puckett/Desktop/Astronomy Club - Radio/Data Test Folder/G20-20180119.rad"
+dateTest = '2018:019:19:08:14'
 
 binDataDictionary = {}
 freqSpaceDataDictionary = {}
@@ -62,7 +61,6 @@ if dataLines != '':
             
             # Data Bin Count
             binCount = int(lineData[8]) # Number of data points
-            print('Bin Count: ' + str(binCount))
             
             # Frequency Space
             centerFreq = float(lineData[5]) # Center Frequency
@@ -148,31 +146,22 @@ if dataLines != '':
             velDataDictionary[date] = velocity
 
         dataLineCount += 1
-            
+     
+# Take the average of the bin data
+if dataLineCount > 0:
+    for binID in range(0, len(binSum) - 1):
+        binSum[binID] = binSum[binID] / dataLineCount
+
 # Print the number of data lines
 print('Number of data lines: ' + str(dataLineCount))
 
 # Plot
-#TO-DO: Add descriptions, titles, and legends for the plots
+plt.plot(freqSpaceDataDictionary[dateTest], binSum, label='Averaged Data')
 
-fig, ax = plt.subplots(2)
-fig.set_figheight(15)
-fig.set_figwidth(20)
 plt.ticklabel_format(useOffset=False)
+plt.xlabel('Frequency MHz')
+plt.ylabel('Temperature K')
+plt.title('Radio Data')
+plt.legend()
 
-ax[0].plot(freqSpaceDataDictionary_RAW[dateTest], binSum_RAW)
-
-print(freqSpaceDataDictionary[dateTest][0])
-
-ax[1].plot(freqSpaceDataDictionary[dateTest], binSum)
-plt.savefig('test.pdf')
-
-#ax[1].plot(velDataDictionary[dateTest], binSum)
-#ax[2].plot(freqSpaceDataDictionary[dateTest], list(binDataDictionary[dateTest]))
-
-
-
-
-
-
-
+plt.savefig('Radio Data.pdf')
