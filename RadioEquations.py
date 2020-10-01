@@ -9,6 +9,10 @@ Equations from the paper 'SRT Paper (2010)' converted to Python as well as data 
 import matplotlib.pyplot as plt
 import math
 
+
+#testing github
+blahblahblah=1
+
 # Velocity of source with respect to the velocity of the local standard
 def VELOCITY_CALC(f, V_lsr):
     
